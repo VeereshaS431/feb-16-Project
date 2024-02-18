@@ -1,0 +1,868 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        #divtag{
+            display: flex;
+            background-color: rgb(255, 255, 255);
+            justify-content: space-evenly;
+            align-items: center;
+            padding: 10px;
+            position: sticky;
+            top: 0px;
+            z-index: 1;
+            opacity: 0.7;
+        }
+        #logo{
+            width: 80px;
+            height: 80px;
+            mix-blend-mode:darken;
+            
+        }
+
+        ul{
+            /* margin-left: 100px; */
+            display: flex;
+            list-style: none;
+            font-size: 20px;
+           
+            
+        }
+      
+        ul li a{
+            text-decoration: none;
+            color: rgb(94, 5, 5);
+            margin-left: 50px;
+            font-weight: bold;
+        }
+
+
+        #home{
+    display: flex;
+    flex-direction: column;
+    padding:3px 200px;
+    height: 550px;
+    justify-content: center;
+    align-items: center;
+}
+
+#home::before{ 
+    content: "";
+    position: absolute;
+    background: url('./images/bg1.jpg') no-repeat center center/cover;
+    height: 642px;
+    top:0px;
+    left:0px;
+    width: 100%;
+    z-index: -1;
+    opacity:0.89;
+}
+
+#home h1{
+    color:white;
+    text-align: center;
+    font-family: 'Bree Serif', serif;
+}
+
+#home p{
+    color:white;
+    text-align: center;
+    font-size: 1.5rem;
+    font-family: 'Bree Serif', serif;
+}
+
+.h-primary{
+    font-family: 'Bree Serif', serif;
+    font-size: 3.8rem;
+    padding: 12px;
+}
+
+.btn1{
+    padding: 6px 20px;
+    border: 2px solid white;
+    background-color: brown;
+    color: white;
+    margin: 17px;
+    font-size: 1.5rem;
+    border-radius: 10px;
+    cursor:pointer;
+}
+
+
+        #marqueetag{
+            margin-top: 20px;
+            font-size: 20px;
+            color: rgb(100, 104, 103);
+            z-index: -1;
+        }
+
+        #divtag1{
+            display: flex;
+            gap: 19px;
+            flex-wrap: wrap;
+            margin-top: 20px;
+            justify-content: center;
+            align-items: center;
+        }
+        img{
+            width: 340px;
+            height: 250px;
+            border-radius: 15px;
+        }
+
+
+        #divtag2{
+            display: flex;
+            gap: 50px;
+            flex-wrap: wrap;
+            margin-top: 20px;
+            justify-content: center;
+            align-items: center;
+            margin-top: 50px;
+        }
+
+
+        .divchild1{
+            width: 500px;
+            display: flex;
+            justify-content: space-around;
+            flex-direction: column;
+            align-items: center;
+            background-color: rgb(218, 222, 225);
+            border-radius: 15px;
+        }
+        h2{
+            margin-top: 20px;
+        }
+
+
+        .divchild2{
+            width: 500px;
+            display: flex;
+            justify-content: space-around;
+            flex-direction: column;
+            align-items: center;
+            background-color: rgb(218, 222, 225);
+            border-radius: 15px;
+        }
+
+        table{
+            font-size: 20px;
+            margin-bottom: 20px;
+            margin-top: 20px;
+        }
+
+        #map{
+            width: 100%;
+            height: 250px;
+            margin-top: 40px;
+        }
+
+        footer{
+            margin-top: 30px;
+            height: 100px;
+            background-color: black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #footh3{
+            color: white;
+        }
+
+
+     @media screen and (max-width: 485px) {
+      /* Home section */
+      #divtag{
+        flex-direction: column;
+        row-gap: 20px;
+      }
+      #logo{
+            width: 50px;
+            height: 50px;
+      }
+     ul li a{
+       /* display: flex;
+       flex-wrap: wrap;
+       justify-content: space-between; */
+       margin-left: 10px;
+       font-size: 17px;
+     }
+
+#home{
+    height: 370px; 
+    padding: 3px 28px;
+}
+
+#home::before{
+    height: 480px; 
+}
+
+#home p{
+    font-size: 13px;
+}
+
+.h-primary{
+    font-size:26px;
+}
+.btn{
+    font-size: 13px;
+    padding: 4px 8px;
+}
+}
+
+
+
+@media screen and (min-width: 366px) and (max-width: 1170px) {
+      /* Home section */
+      #divtag{
+        flex-direction: column;
+        row-gap: 20px;
+      }
+
+     ul li a{
+       display: flex;
+       flex-wrap: wrap;
+       justify-content: space-between;
+     }
+
+#home{
+    height: 370px; 
+    padding: 3px 28px;
+}
+
+#home::before{
+    height: 480px; 
+}
+
+#home p{
+    font-size: 13px;
+}
+
+.h-primary{
+    font-size:26px;
+}
+.btn{
+    font-size: 13px;
+    padding: 4px 8px;
+}
+}
+
+      
+    </style>
+</head>
+<body>
+<!-- <a href=""></a> -->
+
+
+    <script>
+
+        var divtag=document.createElement("div");
+         document.body.appendChild(divtag);
+         divtag.setAttribute("id","divtag");
+
+
+        //  var h3tag=document.createElement("h3")
+        //  divtag.appendChild(h3tag);
+        //  h3tag.innerText="Plate & Palette"
+
+        var logo=document.createElement("img");
+        divtag.appendChild(logo);
+        logo.setAttribute("src","https://th.bing.com/th/id/OIP.RdNN9GEvTFDohpXmSeeplwHaGd?rs=1&pid=ImgDetMain")
+        logo.setAttribute("id","logo")
+
+         var ultag=document.createElement("ul")
+         divtag.appendChild(ultag)
+
+         var litag=document.createElement("li")
+         ultag.appendChild(litag)
+         
+         var atag=document.createElement("a")
+         litag.appendChild(atag)
+         atag.innerText="Home"
+         atag.setAttribute("href","#home");
+
+         var litag=document.createElement("li")
+         ultag.appendChild(litag)
+         
+         var atag=document.createElement("a")
+         litag.appendChild(atag)
+         atag.innerText="About Us"
+         atag.setAttribute("href","#divtag1");
+
+         var litag=document.createElement("li")
+         ultag.appendChild(litag)
+         
+         var atag=document.createElement("a")
+         litag.appendChild(atag)
+         atag.innerText="Menu"
+         atag.setAttribute("href","#divtag2");
+
+         var litag=document.createElement("li")
+         ultag.appendChild(litag)
+         
+         var atag=document.createElement("a")
+         litag.appendChild(atag)
+         atag.innerText="Contact Us"
+         atag.setAttribute("href","#map");
+         
+
+        // console.log(document.body)
+
+        var section1=document.createElement("section")
+        document.body.appendChild(section1)
+        section1.setAttribute("id","home")
+
+        var htag=document.createElement("h1")
+        section1.appendChild(htag)
+        htag.innerText="Welcome to Food Circle"
+        htag.setAttribute("class","h-primary")
+
+        var ptag=document.createElement("p")
+        section1.appendChild(ptag)
+        ptag.innerText="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Perferendis dolorum numquam minus."
+
+        var ptag=document.createElement("p")
+        section1.appendChild(ptag)
+        ptag.innerText="Lorem ipsum dolor sit amet consectetur, adipisicing elit. "
+
+        var btn1=document.createElement("button")
+        section1.appendChild(btn1)
+        btn1.setAttribute("class","btn1")
+        btn1.innerText="Order Now"
+
+
+
+
+
+        marqueetag=document.createElement("marquee")
+        document.body.appendChild(marqueetag);
+        marqueetag.setAttribute("id","marqueetag")
+        marqueetag.innerText="Weekend Offer Fri-Sat-Sun / 5:00PM-10:00PM Rs.1099/- Combo Offers "
+        
+
+
+
+
+        var divtag1=document.createElement("div");
+         document.body.appendChild(divtag1);
+         divtag1.setAttribute("id","divtag1")
+
+         var imgtag=document.createElement("img")
+         divtag1.appendChild(imgtag)
+         imgtag.setAttribute("src","https://images.pexels.com/photos/858508/pexels-photo-858508.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1")
+
+        var imgtag=document.createElement("img")
+         divtag1.appendChild(imgtag)
+         imgtag.setAttribute("src","https://images.pexels.com/photos/958545/pexels-photo-958545.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1")
+
+        var imgtag=document.createElement("img")
+         divtag1.appendChild(imgtag)
+         imgtag.setAttribute("src","https://images.pexels.com/photos/262959/pexels-photo-262959.jpeg")
+
+        var imgtag=document.createElement("img")
+         divtag1.appendChild(imgtag)
+         imgtag.setAttribute("src","https://images.pexels.com/photos/2122280/pexels-photo-2122280.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1")
+
+        var imgtag=document.createElement("img")
+         divtag1.appendChild(imgtag)
+         imgtag.setAttribute("src","https://images.pexels.com/photos/1267320/pexels-photo-1267320.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1")
+
+         var imgtag=document.createElement("img")
+         divtag1.appendChild(imgtag)
+         imgtag.setAttribute("src","https://images.pexels.com/photos/2098143/pexels-photo-2098143.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1")
+
+         var imgtag=document.createElement("img")
+         divtag1.appendChild(imgtag)
+         imgtag.setAttribute("src","https://images.pexels.com/photos/1566837/pexels-photo-1566837.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1")
+
+         var imgtag=document.createElement("img")
+         divtag1.appendChild(imgtag)
+         imgtag.setAttribute("src","https://images.pexels.com/photos/2983101/pexels-photo-2983101.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load")
+         
+
+
+        
+
+
+         var divtag2=document.createElement("div");
+         document.body.appendChild(divtag2);
+         divtag2.setAttribute("id","divtag2")
+
+        var divchild1=document.createElement("div");
+        divtag2.appendChild(divchild1)
+        divchild1.setAttribute("class","divchild1")
+
+        var h2tag=document.createElement("h2")
+        divchild1.appendChild(h2tag);
+        h2tag.innerText="Veg Items"
+
+        var tabletag=document.createElement("table")
+        divchild1.appendChild(tabletag);
+
+        // var tr1=document.createElement("tr")
+        // tabletag.appendChild(tr1);
+
+        // var th1=document.createElement("th")
+        // tr1.appendChild(th1)
+        // th1.innerText="Items"
+
+        // var th1=document.createElement("th")
+        // tr1.appendChild(th1)
+        // th1.innerText="Price"
+
+
+        var tr1=document.createElement("tr")
+        tabletag.appendChild(tr1);
+
+        var td1=document.createElement("td")
+        tr1.appendChild(td1)
+        td1.innerText="Tandoori Paneer Tikka       "
+
+        // var td1=document.createElement("td")
+        // tr1.appendChild(td1)
+        // td1.innerText="220/-"
+
+
+
+        var tr1=document.createElement("tr")
+        tabletag.appendChild(tr1);
+
+        var td1=document.createElement("td")
+        tr1.appendChild(td1)
+        td1.innerText="Malai Paneer Tikka"
+
+        // var td1=document.createElement("td")
+        // tr1.appendChild(td1)
+        // td1.innerText="220/-"
+
+
+        var tr1=document.createElement("tr")
+        tabletag.appendChild(tr1);
+
+        var td1=document.createElement("td")
+        tr1.appendChild(td1)
+        td1.innerText="Soya Tandoori Tikka"
+
+        // var td1=document.createElement("td")
+        // tr1.appendChild(td1)
+        // td1.innerText="220/-"
+
+
+        var tr1=document.createElement("tr")
+        tabletag.appendChild(tr1);
+
+        var td1=document.createElement("td")
+        tr1.appendChild(td1)
+        td1.innerText="Paneer Butter Masala "
+
+        // var td1=document.createElement("td")
+        // tr1.appendChild(td1)
+        // td1.innerText="220/-"
+
+
+        var tr1=document.createElement("tr")
+        tabletag.appendChild(tr1);
+
+        var td1=document.createElement("td")
+        tr1.appendChild(td1)
+        td1.innerText="Chilli Cheese Gralic ToastPaneer Butter Masala "
+
+        // var td1=document.createElement("td")
+        // tr1.appendChild(td1)
+        // td1.innerText="220/-"
+
+
+        var tr1=document.createElement("tr")
+        tabletag.appendChild(tr1);
+
+        var td1=document.createElement("td")
+        tr1.appendChild(td1)
+        td1.innerText="Plain Cheese Pizza "
+
+        // var td1=document.createElement("td")
+        // tr1.appendChild(td1)
+        // td1.innerText="220/-"
+
+
+        var tr1=document.createElement("tr")
+        tabletag.appendChild(tr1);
+
+        var td1=document.createElement("td")
+        tr1.appendChild(td1)
+        td1.innerText="Capsicum, Onion Pizza"
+
+        // var td1=document.createElement("td")
+        // tr1.appendChild(td1)
+        // td1.innerText="220/-"
+
+
+        var tr1=document.createElement("tr")
+        tabletag.appendChild(tr1);
+
+        var td1=document.createElement("td")
+        tr1.appendChild(td1)
+        td1.innerText="Spring Roll"
+
+        // var td1=document.createElement("td")
+        // tr1.appendChild(td1)
+        // td1.innerText="220/-"
+
+
+        var tr1=document.createElement("tr")
+        tabletag.appendChild(tr1);
+
+        var td1=document.createElement("td")
+        tr1.appendChild(td1)
+        td1.innerText="Tandoori Paneer Tikka       "
+
+        // var td1=document.createElement("td")
+        // tr1.appendChild(td1)
+        // td1.innerText="220/-"
+
+
+
+        var tr1=document.createElement("tr")
+        tabletag.appendChild(tr1);
+
+        var td1=document.createElement("td")
+        tr1.appendChild(td1)
+        td1.innerText="Malai Paneer Tikka"
+
+        // var td1=document.createElement("td")
+        // tr1.appendChild(td1)
+        // td1.innerText="220/-"
+
+
+        var tr1=document.createElement("tr")
+        tabletag.appendChild(tr1);
+
+        var td1=document.createElement("td")
+        tr1.appendChild(td1)
+        td1.innerText="Soya Tandoori Tikka"
+
+        // var td1=document.createElement("td")
+        // tr1.appendChild(td1)
+        // td1.innerText="220/-"
+
+
+        var tr1=document.createElement("tr")
+        tabletag.appendChild(tr1);
+
+        var td1=document.createElement("td")
+        tr1.appendChild(td1)
+        td1.innerText="Paneer Butter Masala "
+
+        // var td1=document.createElement("td")
+        // tr1.appendChild(td1)
+        // td1.innerText="220/-"
+
+
+        var tr1=document.createElement("tr")
+        tabletag.appendChild(tr1);
+
+        var td1=document.createElement("td")
+        tr1.appendChild(td1)
+        td1.innerText="Chilli Cheese Gralic ToastPaneer Butter Masala "
+
+        // var td1=document.createElement("td")
+        // tr1.appendChild(td1)
+        // td1.innerText="220/-"
+
+
+        var tr1=document.createElement("tr")
+        tabletag.appendChild(tr1);
+
+        var td1=document.createElement("td")
+        tr1.appendChild(td1)
+        td1.innerText="Plain Cheese Pizza "
+
+        // var td1=document.createElement("td")
+        // tr1.appendChild(td1)
+        // td1.innerText="220/-"
+
+
+        var tr1=document.createElement("tr")
+        tabletag.appendChild(tr1);
+
+        var td1=document.createElement("td")
+        tr1.appendChild(td1)
+        td1.innerText="Capsicum, Onion Pizza"
+
+        // var td1=document.createElement("td")
+        // tr1.appendChild(td1)
+        // td1.innerText="220/-"
+
+
+        var tr1=document.createElement("tr")
+        tabletag.appendChild(tr1);
+
+        var td1=document.createElement("td")
+        tr1.appendChild(td1)
+        td1.innerText="Spring Roll"
+
+        // var td1=document.createElement("td")
+        // tr1.appendChild(td1)
+        // td1.innerText="220/-"
+
+
+
+
+
+
+
+
+
+
+        var divchild2=document.createElement("div");
+        divtag2.appendChild(divchild2)
+        divchild2.setAttribute("class","divchild2")
+
+        var h2tag=document.createElement("h2")
+        divchild2.appendChild(h2tag);
+        h2tag.innerText="Non Veg Items"
+
+
+        var tabletag=document.createElement("table")
+        divchild2.appendChild(tabletag);
+
+        // var tr1=document.createElement("tr")
+        // tabletag.appendChild(tr1);
+
+        // var th1=document.createElement("th")
+        // tr1.appendChild(th1)
+        // th1.innerText="Items"
+
+        // var th1=document.createElement("th")
+        // tr1.appendChild(th1)
+        // th1.innerText="Price"
+
+
+        var tr1=document.createElement("tr")
+        tabletag.appendChild(tr1);
+
+        var td1=document.createElement("td")
+        tr1.appendChild(td1)
+        td1.innerText="Cream of Chicken Soup"
+
+        // var td1=document.createElement("td")
+        // tr1.appendChild(td1)
+        // td1.innerText="220/-"
+
+
+        var tr1=document.createElement("tr")
+        tabletag.appendChild(tr1);
+
+        var td1=document.createElement("td")
+        tr1.appendChild(td1)
+        td1.innerText="Tomato Egg Drop Soup"
+
+        // var td1=document.createElement("td")
+        // tr1.appendChild(td1)
+        // td1.innerText="220/-"
+
+
+        var tr1=document.createElement("tr")
+        tabletag.appendChild(tr1);
+
+        var td1=document.createElement("td")
+        tr1.appendChild(td1)
+        td1.innerText="Chicken Clear Soup"
+
+        // var td1=document.createElement("td")
+        // tr1.appendChild(td1)
+        // td1.innerText="220/-"
+
+
+        var tr1=document.createElement("tr")
+        tabletag.appendChild(tr1);
+
+        var td1=document.createElement("td")
+        tr1.appendChild(td1)
+        td1.innerText="Chicken Kebab"
+
+        // var td1=document.createElement("td")
+        // tr1.appendChild(td1)
+        // td1.innerText="220/-"
+
+
+        var tr1=document.createElement("tr")
+        tabletag.appendChild(tr1);
+
+        var td1=document.createElement("td")
+        tr1.appendChild(td1)
+        td1.innerText="Chicken Afghani "
+
+        // var td1=document.createElement("td")
+        // tr1.appendChild(td1)
+        // td1.innerText="220/-"
+
+
+        var tr1=document.createElement("tr")
+        tabletag.appendChild(tr1);
+
+        var td1=document.createElement("td")
+        tr1.appendChild(td1)
+        td1.innerText="Chicken Adraki"
+
+        // var td1=document.createElement("td")
+        // tr1.appendChild(td1)
+        // td1.innerText="220/-"
+
+
+        var tr1=document.createElement("tr")
+        tabletag.appendChild(tr1);
+
+        var td1=document.createElement("td")
+        tr1.appendChild(td1)
+        td1.innerText="Chilly Chicken"
+
+        // var td1=document.createElement("td")
+        // tr1.appendChild(td1)
+        // td1.innerText="220/-"
+
+
+
+        var tr1=document.createElement("tr")
+        tabletag.appendChild(tr1);
+
+        var td1=document.createElement("td")
+        tr1.appendChild(td1)
+        td1.innerText="Chicken Manchurian"
+
+        // var td1=document.createElement("td")
+        // tr1.appendChild(td1)
+        // td1.innerText="220/-"
+
+
+        var tr1=document.createElement("tr")
+        tabletag.appendChild(tr1);
+
+        var td1=document.createElement("td")
+        tr1.appendChild(td1)
+        td1.innerText="Peppar Wrapped Chicken"
+
+        // var td1=document.createElement("td")
+        // tr1.appendChild(td1)
+        // td1.innerText="220/-"
+
+
+        var tr1=document.createElement("tr")
+        tabletag.appendChild(tr1);
+
+        var td1=document.createElement("td")
+        tr1.appendChild(td1)
+        td1.innerText="Chicken Spring Roll"
+
+        // var td1=document.createElement("td")
+        // tr1.appendChild(td1)
+        // td1.innerText="220/-"
+
+
+
+        var tr1=document.createElement("tr")
+        tabletag.appendChild(tr1);
+
+        var td1=document.createElement("td")
+        tr1.appendChild(td1)
+        td1.innerText="Murgh Makhani "
+
+        // var td1=document.createElement("td")
+        // tr1.appendChild(td1)
+        // td1.innerText="220/-"
+
+
+        var tr1=document.createElement("tr")
+        tabletag.appendChild(tr1);
+
+        var td1=document.createElement("td")
+        tr1.appendChild(td1)
+        td1.innerText="Murgh Hyderabadi "
+
+        // var td1=document.createElement("td")
+        // tr1.appendChild(td1)
+        // td1.innerText="220/-"
+
+
+        var tr1=document.createElement("tr")
+        tabletag.appendChild(tr1);
+
+        var td1=document.createElement("td")
+        tr1.appendChild(td1)
+        td1.innerText="Murgh Shahi Korma"
+
+        // var td1=document.createElement("td")
+        // tr1.appendChild(td1)
+        // td1.innerText="220/-"
+
+
+        var tr1=document.createElement("tr")
+        tabletag.appendChild(tr1);
+
+        var td1=document.createElement("td")
+        tr1.appendChild(td1)
+        td1.innerText="Murgh -E- Rogan "
+
+        // var td1=document.createElement("td")
+        // tr1.appendChild(td1)
+        // td1.innerText="220/-"
+
+        var tr1=document.createElement("tr")
+        tabletag.appendChild(tr1);
+
+        var td1=document.createElement("td")
+        tr1.appendChild(td1)
+        td1.innerText="Home Made Chicken Curry "
+
+        // var td1=document.createElement("td")
+        // tr1.appendChild(td1)
+        // td1.innerText="220/-"
+
+
+
+        var tr1=document.createElement("tr")
+        tabletag.appendChild(tr1);
+
+        var td1=document.createElement("td")
+        tr1.appendChild(td1)
+        td1.innerText="Chilly Chicken "
+
+        // var td1=document.createElement("td")
+        // tr1.appendChild(td1)
+        // td1.innerText="220/-"
+
+
+
+
+
+
+        var map=document.createElement("iframe");
+        document.body.appendChild(map)
+        map.setAttribute("id","map");
+        map.setAttribute("src","https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d60918.453398687!2d78.40237324863281!3d17.392420899999994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb99e9691c5645%3A0x2375d439a8aa94d2!2sFood%20Circle!5e0!3m2!1sen!2sin!4v1708163971491!5m2!1sen!2sin")
+
+
+
+        var footertag=document.createElement("footer")
+        document.body.appendChild(footertag);
+
+        var h3tag=document.createElement("h3")
+         footertag.appendChild(h3tag);
+         h3tag.innerText="Copyright © www.FoodCircles.com. All rights reserved!"
+         h3tag.setAttribute("id","footh3");
+        
+
+
+        
+    </script>
+</body>
+</html>

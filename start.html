@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            display: flex;
+            justify-content: center;
+            height: 100vh;
+            align-items: center;
+            flex-direction: column;
+            background-image: url(https://images.pexels.com/photos/1037995/pexels-photo-1037995.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+            /* background-color: rgb(203, 195, 195); */
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+
+        }
+
+        #container{
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            margin-top: 10px;
+            align-items: center;
+            flex-direction: column;
+            row-gap: 20px;
+           
+            
+        }
+        #main{
+            /* border: 1px solid black; */
+            /* margin-top: 160px; */
+          
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 50vw;
+            padding: 20px;
+            background: transparent;
+            
+        }
+        h1{
+            color: rgb(38, 80, 30);
+            font-size: 35px;
+            /* background-color: rgba(103, 106, 110, 0.603); */
+        }
+        
+
+         #divtag{
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            /* flex-direction: column; */
+            justify-content: space-evenly;
+            align-items: center;
+            width: 100%;
+        }
+        #divcard{
+            display: flex;
+            flex-direction: column;
+            width: 250px;
+            height: 300px;
+            /* border: 1px solid black; */
+            /* text-align: center; */
+            align-items: center;
+            justify-content: center;
+            border-radius: 10px;
+            backdrop-filter: blur(1px);
+          background: rgba(134, 128, 128, 0.47);
+        }
+
+        img{
+            margin-top: -120px;
+            height: 150px;
+            position: absolute;
+            /* mix-blend-mode:darken; */
+            /* mix-blend-mode:color-burn ; */
+            /* object-fit: contain; */
+         
+
+            
+        }
+        #divdiscription{
+            margin-top: 100px;
+            margin-left: 10px;
+            margin-right: 10px;
+            text-align: center;
+            /* position: absolute; */
+            display: flex;
+            flex-wrap: wrap;
+            font-size: 25px;
+            color: rgb(11, 80, 98);
+        }
+        button{
+            /* margin-top: 300px; */
+            margin-bottom: -230px;
+            position: absolute;
+            width: 100px;
+            height: 30px;
+            border: none;
+            border-radius: 10px;
+            background-color: rgb(154, 165, 176);
+            color: white;
+        }
+
+        a{
+            text-decoration: none;
+            font-size: 17px;
+            color: rgb(37, 54, 54);
+        }
+
+
+
+        @media screen and (max-width:519px) {
+            body{
+                height: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    
+
+    <script>
+
+        var container=document.createElement("div")
+        document.body.appendChild(container)
+        container.setAttribute("id","container")
+
+
+        var main=document.createElement("div")
+        container.appendChild(main)
+        main.setAttribute("id","main")
+
+        var h1tag=document.createElement("h1")
+        main.appendChild(h1tag);
+
+        h1tag.innerText="Discover the Best of Both Worlds";
+
+
+
+
+        // var sub=document.createElement("div")
+        // main.appendChild(sub)
+
+        var divtag=document.createElement("div");
+         container.appendChild(divtag);
+         divtag.setAttribute("id","divtag")
+
+          var divcard=document.createElement("div")
+         divtag.appendChild(divcard)
+         divcard.setAttribute("id","divcard")
+
+         var imgtag=document.createElement("img")
+         divcard.appendChild(imgtag)
+
+         imgtag.setAttribute("src","https://clipartcraft.com/images/restaurant-clipart-transparent-background-1.png")
+
+         imgtag.setAttribute("width","150")
+
+         var divdiscription=document.createElement("div")
+         divcard.appendChild(divdiscription)
+         divdiscription.innerText="Restarunt"
+         divdiscription.setAttribute("id","divdiscription")
+
+         var btn=document.createElement("button")
+         divcard.appendChild(btn)
+         
+
+         var atag=document.createElement("a")
+         btn.appendChild(atag)
+         atag.setAttribute("href","./restorent.html");
+         atag.innerText="Visit Site"
+
+         atag.setAttribute("target","_blank")
+
+
+
+
+        var divcard=document.createElement("div")
+         divtag.appendChild(divcard)
+         divcard.setAttribute("id","divcard")
+
+         var imgtag=document.createElement("img")
+         divcard.appendChild(imgtag)
+
+         imgtag.setAttribute("src","./images/online-shop.png")
+
+         imgtag.setAttribute("width","180")
+
+         var divdiscription=document.createElement("div")
+         divcard.appendChild(divdiscription)
+         divdiscription.innerText="Shopping"
+         divdiscription.setAttribute("id","divdiscription")
+
+         var btn=document.createElement("button")
+         divcard.appendChild(btn)
+        
+
+         var atag=document.createElement("a")
+         btn.appendChild(atag)
+         atag.setAttribute("href","./card.html")
+         atag.innerText="Visit Site"
+         atag.setAttribute("target","_blank")
+
+        //  console.log(document.body)
+
+
+    </script>
+</body>
+</html>
